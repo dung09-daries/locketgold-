@@ -7,8 +7,8 @@
 hostname = %APPEND% api.revenuecat.com, firebaseremoteconfig.googleapis.com
 
 [Script]
-# 1. Tùy chỉnh Feature, Video 60s & Caption cá nhân (Đã trỏ sang link JS của bạn)
-locket_remote = type=http-response, pattern=^https?:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-.*, script-path=https://raw.githubusercontent.com/dung09-daries/locketgoldtd/refs/heads/main/Untitled-1.js, requires-body=true, max-size=524288, timeout=60
+# 1. Tùy chỉnh Feature, Video 60s & Caption cá nhân
+locket_remote = type=http-response, pattern=^https?:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-.*, script-path=https://raw.githubusercontent.com/dung09-daries/locketgold-/refs/heads/main/Untitled-1.js, requires-body=true, max-size=524288, timeout=60
 
 # 2. Xóa ETag Header chống dính Cache
 deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/usatalk/locket/main/deleteHeader.js, timeout=60
